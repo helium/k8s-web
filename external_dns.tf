@@ -107,7 +107,6 @@ spec:
         args:
         - --source=service
         - --source=ingress
-        - --domain-filter=${var.domain_filter}
         - --provider=aws
         - --policy=upsert-only # would prevent ExternalDNS from deleting any records, omit to enable full synchronization
         - --aws-zone-type=

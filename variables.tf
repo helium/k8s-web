@@ -30,12 +30,6 @@ variable "zone_cert" {
   default = "arn:aws:acm:us-east-1:694730983297:certificate/5e357031-0723-40d3-9723-7475c6188824"
 }
 
-variable "domain_filter" {
-  description = "External-dns Domain filter."
-  type       = string
-  default = ".test-helium.com"
-}
-
 variable "cidr_block" {
   type = string
   default = "10.0.0.0/16"
