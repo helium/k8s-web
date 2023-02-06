@@ -25,22 +25,12 @@ resource "kubernetes_service_account" "external_dns" {
   automount_service_account_token = true
 }
 
-resource "kubernetes_service_account" "rds_mobile_oracle_user_access" {
+resource "kubernetes_service_account" "rds_migration_service_access" {
   metadata {
     name        = "rds-mobile-oracle-user-access"
     namespace   = "helium"
     annotations = {
-      "eks.amazonaws.com/role-arn" = data.aws_iam_role.rds_mobile_oracle_user_access_role.arn,
-    }
-  }
-}
-
-resource "kubernetes_service_account" "rds_active_device_oracle_user_access" {
-  metadata {
-    name        = "rds-active-device-oracle-user-access"
-    namespace   = "helium"
-    annotations = {
-      "eks.amazonaws.com/role-arn" = data.aws_iam_role.rds_active_device_oracle_user_access_role.arn,
+      "eks.amazonaws.com/role-arn" = data.aws_iam_role.rds_migration_service_access_role.arn,
     }
   }
 }

@@ -5,31 +5,31 @@ variable "aws_region" {
 
 variable "cluster_name" {
   type = string
-  default = "helium"
+  default = "helium-web"
 }
 
 variable "env" {
-  default = "prod"
+  default = "dev"
 }
 
 variable "zone_id" {
   description = "Route53 zone ID"
   type        = string
-  default = "Z050039512T5DB5GPPHRV"
+  default = "Z0569325L7XT2OOHXNLX"
 }
 
 variable "argo_url" {
-  default = "argo.oracle.test-helium.com"
+  default = "argo.web.test-helium.com"
 }
 
 variable "zone_cert" {
-  default = "arn:aws:acm:us-east-1:848739503602:certificate/c9616061-04ef-48a3-91fa-0fc62fcab6df"
+  default = "arn:aws:acm:us-east-1:694730983297:certificate/5e357031-0723-40d3-9723-7475c6188824"
 }
 
 variable "domain_filter" {
   description = "External-dns Domain filter."
   type       = string
-  default = "oracle.test-helium.com"
+  default = "nft.test-helium.com,monitoring.test-helium.com,*.web.test-helium.com"
 }
 
 variable "cidr_block" {
