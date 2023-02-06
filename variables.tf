@@ -5,11 +5,11 @@ variable "aws_region" {
 
 variable "cluster_name" {
   type = string
-  default = "helium-web"
+  default = "web-cluster"
 }
 
 variable "env" {
-  default = "dev"
+  default = "web"
 }
 
 variable "zone_id" {
