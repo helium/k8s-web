@@ -9,7 +9,7 @@ variable "cluster_name" {
 }
 
 variable "env" {
-  default = "web"
+  default = "dev"
 }
 
 variable "zone_id" {

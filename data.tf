@@ -7,7 +7,7 @@ data "kubectl_path_documents" "nginx" {
 }
 
 data "aws_eks_cluster" "eks" {
-  name = local.cluster_name
+  name = var.cluster_name
 }
 
 data "aws_eks_cluster_auth" "eks" {
