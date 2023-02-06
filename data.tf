@@ -6,12 +6,16 @@ data "kubectl_path_documents" "nginx" {
   }
 }
 
+locals {
+  cluster_name = "${var.cluster_name}-${var.stage}"
+}
+
 data "aws_eks_cluster" "eks" {
-  name = var.cluster_name
+  name = local.cluster_name
 }
 
 data "aws_eks_cluster_auth" "eks" {
-  name = var.cluster_name
+  name = local.cluster_name
 }
 
 data "aws_caller_identity" "current" {}

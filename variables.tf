@@ -9,7 +9,11 @@ variable "cluster_name" {
 }
 
 variable "env" {
-  default = "dev"
+  default = "web"
+}
+
+variable "stage" {
+  default = "sdlc"
 }
 
 variable "zone_id" {

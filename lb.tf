@@ -1,5 +1,5 @@
 locals {
-  lb_role_name = "${var.cluster_name}-aws-load-balancer-controller"
+  lb_role_name = "${local.cluster_name}-aws-load-balancer-controller"
 }
 
 resource "aws_iam_role" "lb" {
@@ -42,7 +42,7 @@ resource "helm_release" "lbc" {
   cleanup_on_fail  = true
   set {
     name = "clusterName"
-    value = var.cluster_name
+    value = local.cluster_name
   }
   set {
     name = "serviceAccount.name"

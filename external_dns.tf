@@ -3,7 +3,7 @@ locals {
 }
 
 resource "aws_iam_role" "external_dns" {
-  name  = "${var.cluster_name}-external-dns"
+  name  = "${local.cluster_name}-external-dns"
 
   assume_role_policy = <<EOF
 {
@@ -27,7 +27,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "external_dns" {
-  name_prefix = "${var.cluster_name}-external-dns"
+  name_prefix = "${local.cluster_name}-external-dns"
   role        = aws_iam_role.external_dns.name
   policy      = file("${path.module}/policies/external-dns-iam-policy.json")
 }
