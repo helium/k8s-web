@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: helium
   source:
-    repoURL: https://github.com/helium/k8s-eb
+    repoURL: https://github.com/helium/k8s-web
     path: argocd/manifests/helium
     targetRevision: HEAD
     directory:
