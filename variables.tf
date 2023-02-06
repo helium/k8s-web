@@ -33,7 +33,7 @@ variable "zone_cert" {
 variable "domain_filter" {
   description = "External-dns Domain filter."
   type       = string
-  default = "nft.test-helium.com,monitoring.test-helium.com,*.web.test-helium.com"
+  default = ".test-helium.com"
 }
 
 variable "cidr_block" {
