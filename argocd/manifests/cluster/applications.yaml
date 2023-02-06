@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: helium
   source:
-    repoURL: https://github.com/helium/helium-foundation-k8s
+    repoURL: https://github.com/helium/k8s-eb
     path: argocd/manifests/helium
     targetRevision: HEAD
     directory:
@@ -32,7 +32,7 @@ spec:
     server: https://kubernetes.default.svc
   project: monitoring
   source:
-    repoURL: https://github.com/helium/helium-foundation-k8s
+    repoURL: https://github.com/helium/k8s-web
     path: argocd/manifests/monitoring
     targetRevision: HEAD
     directory:
