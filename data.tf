@@ -25,11 +25,7 @@ data "kubectl_path_documents" "application" {
 }
 
 data "aws_iam_role" "rds_web_access_role" {
-  name = "rds-web-user-access-role" 
-}
-
-data "aws_iam_role" "rds_web_user_access_role" {
-  name = "rds-web-user-access-role" 
+  name = "rds-web-web-user-access-role" 
 }
 
 data "aws_security_group" "rds_access_security_group" {
